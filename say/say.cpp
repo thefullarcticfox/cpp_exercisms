@@ -2,6 +2,7 @@
 #include <map>
 #include <vector>
 #include <stdexcept>
+#include <algorithm>
 
 namespace say {
 	std::string	in_english(unsigned long long n) {
@@ -26,9 +27,10 @@ namespace say {
 		parts.reserve(20);
 
 		while (n != 0) {
-			parts.insert(parts.begin(), n % 1000);
+			parts.push_back(n % 1000);
 			n /= 1000;
 		}
+		std::reverse(parts.begin(), parts.end());
 
 		std::string	res;
 		for (size_t i = 0; i < parts.size(); i++) {
@@ -54,11 +56,12 @@ namespace say {
 				res += " million";
 			if (parts.size() - i == 4)
 				res += " billion";
-			for (size_t j = i + 1; j < parts.size(); j++)
+			for (size_t j = i + 1; j < parts.size(); j++) {
 				if (parts.at(j) != 0) {
 					res += " ";
 					break;
 				}
+			}
 		}
 
 		return (res);

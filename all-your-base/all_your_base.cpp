@@ -4,22 +4,24 @@
 #include <limits>
 
 namespace all_your_base {
-	using std::vector;
+	using namespace std;
 	using uint = unsigned int;
 
 	vector<uint>	convert(uint inbase, const vector<uint>& indigits, uint outbase) {
 		if (inbase < 2 || outbase < 2)
-			throw std::invalid_argument("base is lower than possible");
+			throw invalid_argument("base is lower than possible");
 
 		uint	num = 0;		//	getting number from vector
 		for (auto digit : indigits) {
 			if (digit >= inbase)
-				throw std::invalid_argument("impossible number for inbase");
-			if (num > std::numeric_limits<uint>::max() / inbase)
-				throw std::runtime_error("would overflow");
+				throw invalid_argument("impossible number for inbase");
+
+			if (num > numeric_limits<uint>::max() / inbase)
+				throw overflow_error("unsigned int would overflow");
 			num *= inbase;
-			if (num > std::numeric_limits<uint>::max() - digit)
-				throw std::runtime_error("would overflow");
+
+			if (num > numeric_limits<uint>::max() - digit)
+				throw overflow_error("unsigned int would overflow");
 			num += digit;
 		}
 
@@ -30,7 +32,7 @@ namespace all_your_base {
 			num /= outbase;
 		}
 
-		std::reverse(res.begin(), res.end());
+		reverse(res.begin(), res.end());
 		return (res);
 	}
 }  // namespace all_your_base

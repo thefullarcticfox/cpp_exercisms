@@ -3,9 +3,7 @@
 #include <vector>
 
 namespace all_your_base {
-	/*	indigits should contain values lower than inbase
-	**	otherwise it will throw invalid_argument exception
-	**	also if indigits contain a number bigger than uint in will be discarded	*/
+	//	if indigits contain a value bigger than unsigned int it will throw exception
 	std::vector<unsigned int>	convert(unsigned int inbase,
 		const std::vector<unsigned int>& indigits, unsigned int outbase);
 }  // namespace all_your_base
