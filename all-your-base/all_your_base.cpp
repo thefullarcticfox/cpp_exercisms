@@ -11,26 +11,28 @@ namespace all_your_base {
 		if (inbase < 2 || outbase < 2)
 			throw invalid_argument("base is lower than possible");
 
-		uint	num = 0;		//	getting number from vector
-		for (auto digit : indigits) {
-			if (digit >= inbase)
+		vector<uint>	res(1, 0);
+		res.reserve(1000);
+
+		for (auto indigit : indigits) {
+			if (indigit >= inbase)
 				throw invalid_argument("impossible number for inbase");
 
-			if (num > numeric_limits<uint>::max() / inbase)
-				throw overflow_error("unsigned int would overflow");
-			num *= inbase;
+			uint carry = indigit;
+			for (auto& digit : res) {
+				uint d = digit * inbase + carry;
+				digit = d % outbase;
+				carry = d / outbase;
+			}
 
-			if (num > numeric_limits<uint>::max() - digit)
-				throw overflow_error("unsigned int would overflow");
-			num += digit;
+			while (carry > 0) {
+				res.push_back(carry % outbase);
+				carry /= outbase;
+			}
 		}
 
-		vector<uint>	res;	//	returning it back in outbase
-		res.reserve(20);
-		while (num != 0) {
-			res.push_back(num % outbase);
-			num /= outbase;
-		}
+		if (res.size() == 1 && res.at(0) == 0)
+			res.pop_back();
 
 		reverse(res.begin(), res.end());
 		return (res);
