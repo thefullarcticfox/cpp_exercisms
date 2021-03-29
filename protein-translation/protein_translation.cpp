@@ -1,4 +1,6 @@
 #include "protein_translation.h"
+using std::string;
+using std::vector;
 
 namespace protein_translation {
 	vector<string>	proteins(const string& rna) {

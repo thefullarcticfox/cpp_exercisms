@@ -1,13 +1,11 @@
 #if !defined(MEETUP_H)
 #define MEETUP_H
 #include <boost/date_time/gregorian/gregorian.hpp>
-using	boost::gregorian::date;
-using	boost::gregorian::months_of_year;
-using	boost::gregorian::greg_weekday;
-using	boost::gregorian::date_duration;
-typedef	greg_weekday::weekday_enum	wd_enum;
 
 namespace meetup {
+	using namespace	boost::gregorian;
+	using wd_enum = greg_weekday::weekday_enum;
+
 	class scheduler {
 	private:
 		months_of_year	_month;

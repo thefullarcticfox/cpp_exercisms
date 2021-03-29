@@ -2,15 +2,13 @@
 #include <map>
 #include <vector>
 #include <stdexcept>
-using std::map;
-using std::vector;
 
 namespace say {
-	string	in_english(unsigned long long n) {
+	std::string	in_english(unsigned long long n) {
 		if (n > 999999999999ULL)
 			throw std::domain_error("more than one trillion");
 
-		const map<unsigned long long, std::string>	dict = {
+		const std::map<unsigned long long, std::string>	dict = {
 			{0, "zero"}, {1, "one"}, {2, "two"}, {3, "three"}, {4, "four"},
 			{5, "five"}, {6, "six"}, {7, "seven"}, {8, "eight"}, {9, "nine"},
 			{10, "ten"}, {11, "eleven"}, {12, "twelve"}, {13, "thirteen"},
@@ -24,7 +22,7 @@ namespace say {
 			return (dict.at(n));
 		} catch (const std::out_of_range& e) {}
 
-		vector<int>	parts;
+		std::vector<int>	parts;
 		parts.reserve(20);
 
 		while (n != 0) {
@@ -32,7 +30,7 @@ namespace say {
 			n /= 1000;
 		}
 
-		string	res;
+		std::string	res;
 		for (size_t i = 0; i < parts.size(); i++) {
 			if (parts.at(i) == 0)
 				continue;

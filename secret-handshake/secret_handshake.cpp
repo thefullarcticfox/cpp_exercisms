@@ -1,14 +1,10 @@
 #include "secret_handshake.h"
 #include <algorithm>
 #include <map>
-using std::map;
-// 1 = wink
-// 10 = double blink
-// 100 = close your eyes
-// 1000 = jump
-// 10000 = Reverse the order of the operations in the secret handshake.
+using namespace std;
 
 namespace secret_handshake {
+
 	static void		wink(vector<string>& cmds) {
 		cmds.push_back("wink");
 	}

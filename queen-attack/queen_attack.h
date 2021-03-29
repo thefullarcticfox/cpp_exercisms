@@ -3,23 +3,20 @@
 #include <string>
 #include <vector>
 #include <utility>
-using std::string;
-using std::vector;
-using std::pair;
 
 namespace queen_attack {
 	class chess_board {
 	private:
-		vector<string>	arr;
+		std::vector<std::string>	arr;
 	public:
 		explicit
-		chess_board(const pair<int, int>& w = {0, 3},
-					const pair<int, int>& b = {7, 3});
+		chess_board(const std::pair<int, int>& w = {0, 3},
+					const std::pair<int, int>& b = {7, 3});
 
 		operator		std::string() const;
 
-		pair<int, int>	white() const;
-		pair<int, int>	black() const;
+		std::pair<int, int>	white() const;
+		std::pair<int, int>	black() const;
 
 		bool			can_attack() const;
 	};

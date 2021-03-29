@@ -2,20 +2,18 @@
 #define ROBOT_NAME_H
 #include <string>
 #include <set>
-using std::string;
-using std::set;
 
 namespace robot_name {
 	class robot {
 	private:
-		static set<string>	generated;
-		string				_name;
-		static string		generate();
+		static std::set<std::string>	generated;
+		std::string						_name;
+		static std::string				generate();
 	public:
 		robot();
 
-		const string&		name() const;
-		void				reset();
+		const std::string&		name() const;
+		void					reset();
 	};
 }  // namespace robot_name
 

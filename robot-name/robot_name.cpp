@@ -3,6 +3,8 @@
 #include <utility>
 using std::random_device;
 using std::pair;
+using std::string;
+using std::set;
 
 namespace robot_name {
 	set<string>	robot::generated = {""};

@@ -13,8 +13,8 @@ namespace rna_transcription {
 		return (c);
 	}
 
-	string	to_rna(const string& s) {
-		string	res(s);
+	std::string	to_rna(const std::string& s) {
+		std::string	res(s);
 		for (size_t i = 0; i < res.size(); i++)
 			res.at(i) = to_rna(res.at(i));
 		return (res);

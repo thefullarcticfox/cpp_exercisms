@@ -1,5 +1,6 @@
 #include "queen_attack.h"
 #include <stdexcept>
+using namespace std;
 
 namespace queen_attack {
 	chess_board::chess_board(const pair<int, int>& w, const pair<int, int>& b) : arr(8, "________") {

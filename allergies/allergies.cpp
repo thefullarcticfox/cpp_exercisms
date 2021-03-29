@@ -1,4 +1,8 @@
 #include "allergies.h"
+using std::string;
+using std::map;
+using std::unordered_set;
+using uint = unsigned int;
 
 namespace allergies {
 	allergy_test::allergy_test(uint score) : score(score),

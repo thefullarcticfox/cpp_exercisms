@@ -1,8 +1,8 @@
 #include "prime_factors.h"
 
 namespace prime_factors {
-	vector<int>		of(int num) {
-		vector<int>	res;
+	std::vector<int>		of(int num) {
+		std::vector<int>	res;
 		res.reserve(20);
 
 		while (num % 2 == 0) {

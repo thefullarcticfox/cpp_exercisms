@@ -3,8 +3,7 @@
 #include "boost/date_time/posix_time/posix_time.hpp"
 
 namespace gigasecond {
-	using namespace	boost::posix_time;
-	ptime	advance(const ptime& time);
+	boost::posix_time::ptime	advance(const boost::posix_time::ptime& time);
 }  // namespace gigasecond
 
 #endif // GIGASECOND_H

@@ -3,7 +3,7 @@
 using std::set;
 
 namespace sum_of_multiples {
-	int		to(const vector<int>& nums, int below) {
+	int		to(const std::vector<int>& nums, int below) {
 		std::set<int>	muliples;
 
 		for (auto num : nums)

@@ -3,11 +3,10 @@
 #include <utility>
 #include <string>
 #include <map>
-using	std::map;
-using	std::pair;
-using	std::string;
 
 namespace robot_simulator {
+	using namespace	std;
+
 	enum Bearing {
 		NORTH = 0,
 		EAST = 1,

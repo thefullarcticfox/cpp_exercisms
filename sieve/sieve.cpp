@@ -1,5 +1,6 @@
 #include "sieve.h"
 #include <stdexcept>
+using std::vector;
 
 namespace sieve {
 	vector<int>	primes(int n) {
