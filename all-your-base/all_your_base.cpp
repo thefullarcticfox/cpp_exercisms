@@ -1,7 +1,6 @@
 #include "all_your_base.h"
 #include <stdexcept>
 #include <algorithm>
-#include <limits>
 
 namespace all_your_base {
 	using namespace std;
