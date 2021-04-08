@@ -4,20 +4,20 @@
 namespace space_age {
 	class space_age {
 	private:
-		long	sec;
+		long long	sec;
 	public:
 		explicit
-		space_age(long sec);
+		space_age(long long sec);
 
-		long	seconds() const;
-		float	on_earth() const;
-		float	on_mercury() const;
-		float	on_venus() const;
-		float	on_mars() const;
-		float	on_jupiter() const;
-		float	on_saturn() const;
-		float	on_uranus() const;
-		float	on_neptune() const;
+		long long	seconds() const;
+		double		on_earth() const;
+		double		on_mercury() const;
+		double		on_venus() const;
+		double		on_mars() const;
+		double		on_jupiter() const;
+		double		on_saturn() const;
+		double		on_uranus() const;
+		double		on_neptune() const;
 	};
 }  // namespace space_age
 

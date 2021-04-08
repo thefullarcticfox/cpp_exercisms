@@ -1,49 +1,57 @@
 #include "space_age.h"
 
 namespace space_age {
-	space_age::space_age(long sec) : sec(sec) {}
+	constexpr double earth_years_per_second = 1.0 / 31557600;
+	constexpr double mercury_years_per_second =
+    	earth_years_per_second / 0.2408467;
+	constexpr double venus_years_per_second =
+    	earth_years_per_second / 0.61519726;
+	constexpr double mars_years_per_second =
+    	earth_years_per_second / 1.8808158;
+	constexpr double jupiter_years_per_second =
+    	earth_years_per_second / 11.862615;
+	constexpr double saturn_years_per_second =
+    	earth_years_per_second / 29.447498;
+	constexpr double uranus_years_per_second =
+    	earth_years_per_second / 84.016846;
+	constexpr double neptune_years_per_second =
+    	earth_years_per_second / 164.79132;
 
-	long	space_age::seconds() const {
+	space_age::space_age(long long sec) : sec(sec) {}
+
+	long long	space_age::seconds() const {
 		return (sec);
 	}
 
-	// since we go approximate we can use float instead of double
-	float	space_age::on_earth() const {
-		return (static_cast<float>(sec) * 3.16880878e-8f);
+	double	space_age::on_earth() const {
+		return (sec * earth_years_per_second);
 	}
 
-	// Mercury: orbital period 0.2408467 Earth years
-	float	space_age::on_mercury() const {
-		return (on_earth() * 4.15201869f);
+	double	space_age::on_mercury() const {
+		return (sec * mercury_years_per_second);
 	}
 
-	// Venus: orbital period 0.61519726 Earth years
-	float	space_age::on_venus() const {
-		return (on_earth() * 1.62549488f);
+	double	space_age::on_venus() const {
+		return (sec * venus_years_per_second);
 	}
 
-	// Mars: orbital period 1.8808158 Earth years
-	float	space_age::on_mars() const {
-		return (on_earth() * 0.53168417f);
+	double	space_age::on_mars() const {
+		return (sec * mars_years_per_second);
 	}
 
-	// Jupiter: orbital period 11.862615 Earth years
-	float	space_age::on_jupiter() const {
-		return (on_earth() * 0.08429844f);
+	double	space_age::on_jupiter() const {
+		return (sec * jupiter_years_per_second);
 	}
 
-	// Saturn: orbital period 29.447498 Earth years
-	float	space_age::on_saturn() const {
-		return (on_earth() * 0.03395874f);
+	double	space_age::on_saturn() const {
+		return (sec * saturn_years_per_second);
 	}
 
-	// Uranus: orbital period 84.016846 Earth years
-	float	space_age::on_uranus() const {
-		return (on_earth() * 0.01190237f);
+	double	space_age::on_uranus() const {
+		return (sec * uranus_years_per_second);
 	}
 
-	// Neptune: orbital period 164.79132 Earth years
-	float	space_age::on_neptune() const {
-		return (on_earth() * 0.00606828f);
+	double	space_age::on_neptune() const {
+		return (sec * neptune_years_per_second);
 	}
 }  // namespace space_age
