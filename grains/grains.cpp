@@ -1,4 +1,5 @@
 #include "grains.h"
+#include <bitset>
 #include <stdexcept>
 
 namespace grains {
@@ -9,9 +10,7 @@ namespace grains {
 	}
 
 	unsigned long long	total() {
-		unsigned long long	res = 0;
-		for (int i = 1; i <= 64; i++)
-			res |= square(i);
-		return (res);
+		std::bitset<64>	bits;
+		return bits.set().to_ullong();
 	}
 }  // namespace grains
