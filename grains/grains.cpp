@@ -9,6 +9,9 @@ namespace grains {
 	}
 
 	unsigned long long	total() {
-		return ~0ULL;	//	just flip all 64 bits
+		unsigned long long	res = 0;
+		for (int i = 1; i <= 64; i++)
+			res |= square(i);
+		return (res);
 	}
 }  // namespace grains
