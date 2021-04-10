@@ -17,9 +17,10 @@ namespace triangle {
 		if (x <= 0 || y <= 0 || z <= 0 ||
 			z > x + y || x > y + z || y > x + z)
 			throw std::domain_error("invalid triangle");
-		if (almost_equal(x, y) && almost_equal(y, z))
+		short	equalsum = almost_equal(x, y) + almost_equal(y, z) + almost_equal(x, z);
+		if (equalsum > 1)
 			return flavor::equilateral;
-		if (almost_equal(x, y) || almost_equal(y, z) || almost_equal(x, z))
+		if (equalsum > 0)
 			return flavor::isosceles;
 		return flavor::scalene;
 	}
