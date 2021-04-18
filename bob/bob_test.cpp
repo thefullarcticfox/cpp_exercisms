@@ -88,7 +88,6 @@ TEST_CASE("prattling_on")
     REQUIRE("Sure." == bob::hey("Wait! Hang on. Are you going to be OK?"));
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 TEST_CASE("silence")
 {
     REQUIRE("Fine. Be that way!" == bob::hey(""));
@@ -128,4 +127,6 @@ TEST_CASE("non_question_ending_with_whitespace")
 {
 	REQUIRE("Whatever." == bob::hey("This is a statement ending with whitespace      "));
 }
+
+#if defined(EXERCISM_RUN_ALL_TESTS)
 #endif
