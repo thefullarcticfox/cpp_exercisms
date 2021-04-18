@@ -4,8 +4,11 @@
 namespace series {
 	std::vector<int>	digits(const std::string& number) {
 		std::vector<int>	res;
-		for (char digit : number)
+		for (char digit : number) {
+			if (!std::isdigit(digit))
+				throw std::domain_error("not a digit in number");
 			res.push_back(digit - '0');
+		}
 		return res;
 	}
 
