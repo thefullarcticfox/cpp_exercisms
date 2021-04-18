@@ -40,7 +40,6 @@ TEST_CASE("keeps_arbitrary_digit_order")
     REQUIRE(expected == actual);
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 TEST_CASE("can_slice_by_1")
 {
     const vector<vector<int>> expected{{0}, {1}, {2}, {3}, {4}};
@@ -99,4 +98,6 @@ TEST_CASE("domain_error_if_not_enough_digits_to_slice")
 {
     REQUIRE_THROWS_AS(series::slice("01032987583", 12), domain_error);
 }
+
+#if defined(EXERCISM_RUN_ALL_TESTS)
 #endif
