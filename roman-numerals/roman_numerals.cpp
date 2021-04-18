@@ -1,18 +1,20 @@
 #include "roman_numerals.h"
+#include <stdexcept>
 #include <map>
 
 namespace roman_numerals {
-	using t_it = std::map<int, char>::const_iterator;
-
 	std::string	convert(int arabic_num) {
-		const std::map< int, char, std::greater<int> >	roman_digits{
-			{1000, 'M'},
-			{500, 'D'},
-			{100, 'C'},
-			{50, 'L'},
-			{10, 'X'},
-			{5, 'V'},
-			{1, 'I'}
+		if (arabic_num < 0)
+			throw std::domain_error("less than zero");
+
+		const std::map< int, std::string, std::greater<int> >	roman_digits{
+			{1000, "M"},	{900, "CM"},
+			{500, "D"},		{400, "CD"},
+			{100, "C"},		{90, "XC"},
+			{50, "L"},		{40, "XL"},
+			{10, "X"},		{9, "IX"},
+			{5, "V"},		{4, "IV"},
+			{1, "I"}
 		};
 
 		std::string	res;
