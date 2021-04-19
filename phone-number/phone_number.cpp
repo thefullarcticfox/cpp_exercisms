@@ -10,8 +10,8 @@ namespace phone_number {
 			if (std::isdigit(digit))
 				_number.push_back(digit);
 		}
-		if (_number.size() < 10)
-			throw std::domain_error("not enough numbers");
+		if (_number.size() < 10 || _number.size() > 11)
+			throw std::domain_error("invalid number length");
 		if (_number.size() > 10) {
 			if (_number.at(0) != '1')
 				throw std::domain_error("invalid country code");
