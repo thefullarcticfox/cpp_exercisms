@@ -20,16 +20,22 @@ namespace meetup {
 		if (fromEnd)
 			day = day.end_of_month();
 
-		int		i = 0;
-		while (i < n && day.month() == _month) {
-			if (day.day_of_week().as_enum() == weekday)
-				if (++i == n)
-					return (day);
+		//	find day of the week
+		while (day.month() == _month && day.day_of_week().as_enum() != weekday) {
 			if (fromEnd)
 				day -= date_duration(1);
 			else
 				day += date_duration(1);
 		}
+
+		//	add or remove weeks n times
+		while (--n && day.month() == _month) {
+			if (fromEnd)
+				day -= date_duration(7);
+			else
+				day += date_duration(7);
+		}
+
 		return (day);
 	}
 
