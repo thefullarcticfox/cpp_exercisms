@@ -63,3 +63,6 @@ series/series
 bob/bob
 pangram/pangram.cpp
 anagram/anagram
+word-count/word-count
+crypto-square/crypto-square
+circular-buffer/circular-buffer
