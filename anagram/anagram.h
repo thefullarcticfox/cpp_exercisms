@@ -11,7 +11,7 @@ namespace anagram {
 		std::map<char, int>	_lettermap;
 	public:
 		explicit
-		anagram(const std::string& words);
+		anagram(const std::string& word);
 
 		std::vector<std::string>	matches(const std::vector<std::string>& words);
 	};
