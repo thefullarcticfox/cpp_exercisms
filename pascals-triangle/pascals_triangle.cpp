@@ -9,8 +9,7 @@ namespace pascals_triangle {
 			std::vector<int>	&row = res.at(i);
 			row.reserve(i + 1);		//	preserve row for ints needed
 
-			size_t	j = 0;
-			while ((j = row.size()) != i + 1) {
+			for (size_t	j = 0; j <= i; j++) {
 				if (j == 0 || j == i)
 					row.push_back(1);
 				else {
