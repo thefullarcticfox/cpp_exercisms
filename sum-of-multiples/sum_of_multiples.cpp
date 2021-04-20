@@ -7,7 +7,7 @@ namespace sum_of_multiples {
 		std::set<int>	muliples;
 
 		for (auto num : nums)
-			for (int i = 1; num * i < below; i++)
+			for (int i = 1; num > 0 && num * i < below; i++)
 				muliples.insert(num * i);
 
 		int	res = 0;
