@@ -1,19 +1,18 @@
 #include "raindrops.h"
-#include <sstream>
 
 namespace raindrops {
 	std::string	convert(int number) {
-		std::ostringstream	oss;
+		std::string	res;
 
 		if (number % 3 == 0)
-			oss << "Pling";
+			res += "Pling";
 		if (number % 5 == 0)
-			oss << "Plang";
+			res += "Plang";
 		if (number % 7 == 0)
-			oss << "Plong";
+			res += "Plong";
 
-		if (oss.str().empty())
-			oss << number;
-		return (oss.str());
+		if (res.empty())
+			res = std::to_string(number);
+		return (res);
 	}
 }  // namespace raindrops
