@@ -20,10 +20,10 @@ namespace word_count {
 		std::string					tmp(str);
 
 		size_t	i = 0;
-		while ((i = tmp.find_first_not_of(" \n\t\r,.!&@$%^&:;")) < tmp.size()) {
+		while ((i = tmp.find_first_not_of(" \n\t\r!\"#$%&()*+,-./:;<=>?@[\\]^_`{|}~")) < tmp.size()) {
 			tmp = tmp.substr(i);
 
-			if ((i = tmp.find_first_of(" \n\t\r,.!&@$%^&:;")) > tmp.size())
+			if ((i = tmp.find_first_of(" \n\t\r!\"#$%&()*+,-./:;<=>?@[\\]^_`{|}~")) > tmp.size())
 				i = tmp.size();
 
 			res[str_tolowerandtrim(tmp.substr(0, i))] += 1;
