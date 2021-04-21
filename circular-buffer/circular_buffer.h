@@ -15,7 +15,7 @@ namespace circular_buffer {
 
 		T		read() {
 			if (_buf.empty())
-				throw std::domain_error("buffer is full");
+				throw std::domain_error("buffer is empty");
 			T	data = _buf.front();
 			_buf.pop_front();
 			return data;
