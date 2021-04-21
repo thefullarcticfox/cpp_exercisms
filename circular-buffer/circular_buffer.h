@@ -31,7 +31,7 @@ namespace circular_buffer {
 			if (_cap != _buf.size())
 				write(data);
 			else {
-				read();
+				_buf.pop_front();
 				write(data);
 			}
 		}
