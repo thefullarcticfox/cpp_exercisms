@@ -1,5 +1,5 @@
 #include "binary.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 
 TEST_CASE("b1_is_decimal_1")
 {

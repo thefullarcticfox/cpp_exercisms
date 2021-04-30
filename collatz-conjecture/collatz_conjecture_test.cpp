@@ -1,4 +1,4 @@
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 #include "collatz_conjecture.h"
 #include <stdexcept>
 

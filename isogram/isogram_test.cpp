@@ -1,5 +1,5 @@
 #include "isogram.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 
 using namespace std;
 

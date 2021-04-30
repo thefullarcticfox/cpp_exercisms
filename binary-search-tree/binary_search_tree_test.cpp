@@ -1,5 +1,5 @@
 #include "binary_search_tree.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 #include <vector>
 
 // test data version: 1.0.0

@@ -1,5 +1,5 @@
 #include "atbash_cipher.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 
 TEST_CASE("encode_yes")
 {

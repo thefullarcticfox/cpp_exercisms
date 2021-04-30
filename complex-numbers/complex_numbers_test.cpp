@@ -2,7 +2,7 @@
 
 #include <cmath>
 
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 
 // Complex Numbers exercise test case data version 1.3.0
 

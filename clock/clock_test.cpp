@@ -1,5 +1,5 @@
 #include "clock.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 #include <sstream>
 
 using namespace std;

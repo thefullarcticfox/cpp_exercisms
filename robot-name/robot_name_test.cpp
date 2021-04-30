@@ -1,5 +1,5 @@
 #include "robot_name.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 #include <cctype>
 #include <string>
 #include <unordered_set>

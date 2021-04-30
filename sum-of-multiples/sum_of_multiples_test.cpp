@@ -1,5 +1,5 @@
 #include "sum_of_multiples.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 
 TEST_CASE("sum_to_1_yields_0")
 {

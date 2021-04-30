@@ -1,6 +1,6 @@
 #include "grade_school.h"
 #include <map>
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 
 using namespace std;
 

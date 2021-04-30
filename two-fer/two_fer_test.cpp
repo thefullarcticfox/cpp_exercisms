@@ -1,5 +1,5 @@
 #include "two_fer.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 #include <string>
 
 // two-fer exercise test case data version 1.2.0

@@ -1,5 +1,5 @@
 #include "crypto_square.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 
 TEST_CASE("normalize_capitals")
 {

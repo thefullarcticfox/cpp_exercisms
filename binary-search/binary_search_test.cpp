@@ -1,5 +1,5 @@
 #include "binary_search.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 #include <stdexcept>
 #include <vector>
 #include <cstddef>

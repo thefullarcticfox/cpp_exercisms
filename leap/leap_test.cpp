@@ -1,5 +1,5 @@
 #include "leap.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 
 TEST_CASE("not_divisible_by_4")
 {

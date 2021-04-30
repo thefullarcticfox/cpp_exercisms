@@ -1,5 +1,5 @@
 #include "bob.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 
 // Bob exercise test case data version 1.4.0
 

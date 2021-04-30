@@ -1,5 +1,5 @@
 #include "series.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 #include <stdexcept>
 
 using namespace std;

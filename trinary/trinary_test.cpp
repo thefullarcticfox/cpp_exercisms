@@ -1,5 +1,5 @@
 #include "trinary.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 
 TEST_CASE("_1_yields_decimal_1")
 {

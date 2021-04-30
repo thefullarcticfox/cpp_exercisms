@@ -1,4 +1,4 @@
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 #include "secret_handshake.h"
 #include <vector>
 #include <string>

@@ -1,5 +1,5 @@
 #include "reverse_string.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 
 TEST_CASE("an_empty_string")
 {

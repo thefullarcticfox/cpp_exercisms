@@ -1,4 +1,4 @@
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 #include "circular_buffer.h"
 #include <stdexcept>
 

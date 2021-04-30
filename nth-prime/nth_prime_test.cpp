@@ -1,5 +1,5 @@
 #include "nth_prime.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 #include <stdexcept>
 
 TEST_CASE("first")

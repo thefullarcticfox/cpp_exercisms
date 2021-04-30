@@ -1,5 +1,5 @@
 #include "raindrops.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 
 TEST_CASE("one_yields_itself")
 {

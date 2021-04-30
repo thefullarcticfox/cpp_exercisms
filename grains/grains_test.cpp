@@ -1,5 +1,5 @@
 #include "grains.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 
 TEST_CASE("square_1")
 {

@@ -1,5 +1,5 @@
 #include "pascals_triangle.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 
 TEST_CASE("zero_rows")
 {

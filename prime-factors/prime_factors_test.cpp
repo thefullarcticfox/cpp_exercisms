@@ -1,5 +1,5 @@
 #include "prime_factors.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 
 TEST_CASE("_1_yields_empty")
 {

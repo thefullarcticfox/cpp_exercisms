@@ -1,5 +1,5 @@
 #include "hexadecimal.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 
 TEST_CASE("hex_1_is_decimal_1")
 {

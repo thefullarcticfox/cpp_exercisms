@@ -1,5 +1,5 @@
 #include "nucleotide_count.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 #include <map>
 #include <stdexcept>
 

@@ -1,4 +1,4 @@
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 #include "protein_translation.h"
 #include <vector>
 #include <string>

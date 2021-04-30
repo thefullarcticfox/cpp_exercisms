@@ -1,6 +1,6 @@
 #include "etl.h"
 #include <map>
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 
 TEST_CASE("transforms_one_value")
 {

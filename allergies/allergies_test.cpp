@@ -1,5 +1,5 @@
 #include "allergies.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 
 #include <string>
 #include <unordered_set>

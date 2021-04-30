@@ -1,5 +1,5 @@
 #include "space_age.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 
 TEST_CASE("age_in_seconds")
 {

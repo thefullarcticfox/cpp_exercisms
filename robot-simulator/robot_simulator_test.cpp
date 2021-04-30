@@ -1,4 +1,4 @@
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 #include "robot_simulator.h"
 
 using robot_simulator::Robot;

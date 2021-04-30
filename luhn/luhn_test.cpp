@@ -1,5 +1,5 @@
 #include "luhn.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 
 //Luhn exercise test case data version 1.6.0
 

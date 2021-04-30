@@ -1,5 +1,5 @@
 #include "word_count.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 #include <map>
 
 using namespace std;

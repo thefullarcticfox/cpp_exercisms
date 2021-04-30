@@ -1,5 +1,5 @@
 #include "all_your_base.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 
 using namespace std;
 

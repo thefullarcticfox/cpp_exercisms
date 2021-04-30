@@ -1,5 +1,5 @@
 #include "matching_brackets.h"
-#include "test/catch.hpp"
+#include "../.common/test/catch.hpp"
 
 TEST_CASE("paired_square_brackets")
 {
