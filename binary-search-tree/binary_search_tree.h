@@ -43,12 +43,12 @@ namespace binary_search_tree {
 		void	insert(const T& data) {
 			if (data <= _data) {
 				if (_left == nullptr)
-					_left = tree_uptr(new binary_tree(data, this));
+					_left = std::make_unique<binary_tree>(data, this);
 				else
 					_left->insert(data);
 			} else {
 				if (_right == nullptr)
-					_right = tree_uptr(new binary_tree(data, this));
+					_right = std::make_unique<binary_tree>(data, this);
 				else
 					_right->insert(data);
 			}
